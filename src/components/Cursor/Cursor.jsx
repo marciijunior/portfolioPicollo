@@ -11,8 +11,18 @@ function Cursor() {
     const ring = ringRef.current;
 
     const moveCursor = (e) => {
-      gsap.to(dot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
-      gsap.to(ring, { x: e.clientX, y: e.clientY, duration: 0.35, ease: "power2.out" });
+      gsap.to(dot, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.1,
+        ease: "power2.out",
+      });
+      gsap.to(ring, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.35,
+        ease: "power2.out",
+      });
     };
 
     const grow = () => ring.classList.add("cursor__ring--hover");
@@ -20,7 +30,9 @@ function Cursor() {
 
     window.addEventListener("mousemove", moveCursor);
 
-    const hoverTargets = document.querySelectorAll("a, button, [role='button'], input, textarea, select, .btn");
+    const hoverTargets = document.querySelectorAll(
+      "a, button, [role='button'], input, textarea, select, .btn",
+    );
     hoverTargets.forEach((el) => {
       el.addEventListener("mouseenter", grow);
       el.addEventListener("mouseleave", shrink);

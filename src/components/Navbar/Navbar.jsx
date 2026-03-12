@@ -11,7 +11,7 @@ function Navbar() {
     gsap.fromTo(
       navRef.current,
       { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out", clearProps: "all" },
     );
 
     const handleScroll = () => {
@@ -52,6 +52,9 @@ function Navbar() {
         <ul
           className={`navbar__links ${menuOpen ? "navbar__links--open" : ""}`}
         >
+          <li>
+            <button onClick={() => scrollTo("hero")}>Início</button>
+          </li>
           <li>
             <button onClick={() => scrollTo("about")}>Sobre</button>
           </li>

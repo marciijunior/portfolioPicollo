@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,11 +24,17 @@ body {
   cursor: none;
 }
 
-a, button, input, textarea, select {
+a,
+button,
+input,
+textarea,
+select {
   cursor: none;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   cursor: none !important;
 }
 
