@@ -134,7 +134,7 @@ function About() {
             <span className="about__stat-label">Reportagens produzidas</span>
           </div>
           <div className="about__stat">
-            <span className="about__stat-number">4</span>
+            <span className="about__stat-number">4 +</span>
             <span className="about__stat-label">Veículos de comunicação</span>
           </div>
           <div className="about__stat">
