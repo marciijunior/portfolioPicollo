@@ -1,17 +1,17 @@
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './About.css'
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./About.css";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        '.about__tag',
+        ".about__tag",
         { x: -60, opacity: 0 },
         {
           x: 0,
@@ -19,13 +19,13 @@ function About() {
           duration: 0.6,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 80%',
+            start: "top 80%",
           },
-        }
-      )
+        },
+      );
 
       gsap.fromTo(
-        '.about__title',
+        ".about__title",
         { y: 50, opacity: 0 },
         {
           y: 0,
@@ -33,13 +33,13 @@ function About() {
           duration: 0.8,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 75%',
+            start: "top 75%",
           },
-        }
-      )
+        },
+      );
 
       gsap.fromTo(
-        '.about__text',
+        ".about__text",
         { y: 40, opacity: 0 },
         {
           y: 0,
@@ -48,13 +48,13 @@ function About() {
           stagger: 0.2,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 65%',
+            start: "top 65%",
           },
-        }
-      )
+        },
+      );
 
       gsap.fromTo(
-        '.about__image-wrapper',
+        ".about__image-wrapper",
         { scale: 0.9, opacity: 0 },
         {
           scale: 1,
@@ -62,13 +62,13 @@ function About() {
           duration: 1,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 70%',
+            start: "top 70%",
           },
-        }
-      )
+        },
+      );
 
       gsap.fromTo(
-        '.about__stat',
+        ".about__stat",
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -76,15 +76,15 @@ function About() {
           duration: 0.6,
           stagger: 0.15,
           scrollTrigger: {
-            trigger: '.about__stats',
-            start: 'top 85%',
+            trigger: ".about__stats",
+            start: "top 85%",
           },
-        }
-      )
-    }, sectionRef)
+        },
+      );
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="about" ref={sectionRef} className="about">
@@ -92,7 +92,7 @@ function About() {
         <div className="about__grid">
           <div className="about__image-wrapper">
             <img
-              src="/assets/foto_titulo.png"
+              src="/assets/foto_titulo.webp"
               alt="Lucas Picollo"
               className="about__image"
             />
@@ -134,7 +134,7 @@ function About() {
             <span className="about__stat-label">Reportagens produzidas</span>
           </div>
           <div className="about__stat">
-            <span className="about__stat-number">4 +</span>
+            <span className="about__stat-number">4+</span>
             <span className="about__stat-label">Veículos de comunicação</span>
           </div>
           <div className="about__stat">
@@ -144,7 +144,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

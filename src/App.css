@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap");
 
 *,
 *::before,
@@ -9,17 +9,26 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #0c0c0c;
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+a, button, input, textarea, select {
+  cursor: none;
+}
+
+*, *::before, *::after {
+  cursor: none !important;
 }
 
 img {
@@ -52,4 +61,42 @@ button {
 ::-webkit-scrollbar-thumb {
   background: #c9a96e;
   border-radius: 3px;
+}
+
+/* Gold shine sweep effect */
+.gold-shine {
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.gold-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.45) 45%,
+    transparent 70%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  mix-blend-mode: overlay;
+  transform: translateX(-130%);
+  pointer-events: none;
+  transition: none;
+}
+
+.gold-shine--active::after {
+  animation: goldShineSweep 0.8s ease forwards;
+}
+
+@keyframes goldShineSweep {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
 }

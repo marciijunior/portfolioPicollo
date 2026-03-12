@@ -50,7 +50,7 @@
 }
 
 .about__tag {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 4px;
@@ -60,7 +60,7 @@
 }
 
 .about__title {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 400;
   color: #fff;
@@ -73,7 +73,7 @@
 }
 
 .about__text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
@@ -96,14 +96,14 @@
 
 .about__stat-number {
   display: block;
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: 2.5rem;
   color: #c9a96e;
   margin-bottom: 0.5rem;
 }
 
 .about__stat-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);

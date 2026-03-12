@@ -9,7 +9,7 @@
 }
 
 .portfolio__tag {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 4px;
@@ -20,7 +20,7 @@
 }
 
 .portfolio__heading {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 400;
   color: #fff;
@@ -40,7 +40,7 @@
 }
 
 .work-card__category {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 3px;
@@ -53,7 +53,7 @@
 }
 
 .work-card__title {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 400;
   color: #fff;
@@ -61,7 +61,7 @@
 }
 
 .work-card__description {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.8;
@@ -82,7 +82,9 @@
   height: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: border-color 0.3s, transform 0.4s;
+  transition:
+    border-color 0.3s,
+    transform 0.4s;
 }
 
 .video-item__frame:hover {
@@ -99,7 +101,7 @@
 }
 
 .video-item__desc {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.7;

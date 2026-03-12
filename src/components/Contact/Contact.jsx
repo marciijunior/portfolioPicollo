@@ -1,63 +1,69 @@
-import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './Contact.css'
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaEnvelope,
+} from "react-icons/fa";
+import "./Contact.css";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        '.contact__tag',
+        ".contact__tag",
         { x: -60, opacity: 0 },
         {
           x: 0,
           opacity: 1,
           duration: 0.6,
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-        }
-      )
+          scrollTrigger: { trigger: sectionRef.current, start: "top 80%" },
+        },
+      );
 
       gsap.fromTo(
-        '.contact__heading',
+        ".contact__heading",
         { y: 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 0.8,
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
-        }
-      )
+          scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+        },
+      );
 
       gsap.fromTo(
-        '.contact__card',
+        ".contact__card",
         { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 0.6,
           stagger: 0.15,
-          scrollTrigger: { trigger: '.contact__grid', start: 'top 85%' },
-        }
-      )
+          scrollTrigger: { trigger: ".contact__grid", start: "top 85%" },
+        },
+      );
 
       gsap.fromTo(
-        '.contact__cta',
+        ".contact__cta",
         { y: 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 0.8,
-          scrollTrigger: { trigger: '.contact__cta', start: 'top 90%' },
-        }
-      )
-    }, sectionRef)
+          scrollTrigger: { trigger: ".contact__cta", start: "top 90%" },
+        },
+      );
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section id="contact" ref={sectionRef} className="contact">
@@ -79,11 +85,7 @@ function Contact() {
             className="contact__card"
           >
             <div className="contact__card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="5" />
-                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-              </svg>
+              <FaInstagram />
             </div>
             <h3 className="contact__card-title">Instagram</h3>
             <p className="contact__card-handle">@marciijunior</p>
@@ -96,10 +98,7 @@ function Contact() {
             className="contact__card"
           >
             <div className="contact__card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <rect x="2" y="2" width="20" height="20" rx="3" />
-                <path d="M7 11v6M7 7v.01M11 11v6m0-3a3 3 0 0 1 6 0v3" />
-              </svg>
+              <FaLinkedinIn />
             </div>
             <h3 className="contact__card-title">LinkedIn</h3>
             <p className="contact__card-handle">/in/marciijunior</p>
@@ -112,24 +111,15 @@ function Contact() {
             className="contact__card"
           >
             <div className="contact__card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <polygon points="23 7 16 12 23 17 23 7" fill="currentColor" stroke="none" />
-                <rect x="1" y="5" width="15" height="14" rx="2" />
-              </svg>
+              <FaYoutube />
             </div>
             <h3 className="contact__card-title">YouTube</h3>
             <p className="contact__card-handle">Canal pessoal</p>
           </a>
 
-          <a
-            href="mailto:contato@lucaspicollo.com"
-            className="contact__card"
-          >
+          <a href="mailto:contato@lucaspicollo.com" className="contact__card">
             <div className="contact__card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <rect x="2" y="4" width="20" height="16" rx="3" />
-                <polyline points="22 7 12 13 2 7" />
-              </svg>
+              <FaEnvelope />
             </div>
             <h3 className="contact__card-title">E-mail</h3>
             <p className="contact__card-handle">contato@lucaspicollo.com</p>
@@ -138,12 +128,13 @@ function Contact() {
 
         <div className="contact__cta">
           <p className="contact__cta-text">
-            &ldquo;O bom jornalismo é aquele que faz a diferença na vida das pessoas.&rdquo;
+            &ldquo;O bom jornalismo é aquele que faz a diferença na vida das
+            pessoas.&rdquo;
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

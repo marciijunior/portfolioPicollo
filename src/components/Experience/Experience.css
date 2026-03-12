@@ -9,7 +9,7 @@
 }
 
 .experience__tag {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 4px;
@@ -20,7 +20,7 @@
 }
 
 .experience__heading {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 400;
   color: #fff;
@@ -75,7 +75,7 @@
 }
 
 .timeline__year {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 3px;
@@ -84,7 +84,7 @@
 }
 
 .timeline__title {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
@@ -92,7 +92,7 @@
 }
 
 .timeline__desc {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.7;
@@ -107,7 +107,7 @@
 }
 
 .experience__skills-title {
-  font-family: 'Prata', serif;
+  font-family: "Prata", serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
@@ -121,7 +121,7 @@
 }
 
 .skill-tag {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
