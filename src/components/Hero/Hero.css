@@ -1,0 +1,140 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/assets/background1.png') center / cover no-repeat;
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 12, 12, 0.6) 0%,
+    rgba(12, 12, 12, 0.85) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero__title-wrapper {
+  overflow: hidden;
+}
+
+.hero__title {
+  font-family: 'Prata', serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.hero__title--accent {
+  color: #c9a96e;
+}
+
+.hero__subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--primary {
+  background: #c9a96e;
+  color: #0c0c0c;
+  border: 2px solid #c9a96e;
+}
+
+.btn--primary:hover {
+  background: transparent;
+  color: #c9a96e;
+}
+
+.btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--outline:hover {
+  border-color: #c9a96e;
+  color: #c9a96e;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.hero__scroll-indicator span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.625rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #c9a96e, transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+@media (max-width: 768px) {
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}

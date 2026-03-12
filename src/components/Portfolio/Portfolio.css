@@ -1,0 +1,125 @@
+.portfolio {
+  padding: 8rem 2rem;
+  background: #111;
+}
+
+.portfolio__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio__tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a96e;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.portfolio__heading {
+  font-family: 'Prata', serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 4rem 0;
+}
+
+.portfolio__heading--accent {
+  color: #c9a96e;
+}
+
+.work-card {
+  margin-bottom: 5rem;
+}
+
+.work-card__header {
+  margin-bottom: 2.5rem;
+}
+
+.work-card__category {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a96e;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  margin-bottom: 1rem;
+}
+
+.work-card__title {
+  font-family: 'Prata', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 1rem 0;
+}
+
+.work-card__description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  margin: 0;
+}
+
+.work-card__videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.video-item__frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s, transform 0.4s;
+}
+
+.video-item__frame:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  transform: translateY(-4px);
+}
+
+.video-item__frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-item__desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 1rem;
+}
+
+.work-card__divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(201, 169, 110, 0.4);
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 5rem 1.5rem;
+  }
+
+  .work-card__videos {
+    grid-template-columns: 1fr;
+  }
+}
